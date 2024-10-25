@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./kh.png" type="image/x-icon"> <!-- Logo uchun favicon qo'shish -->
+
   <title>Sonlar haqida ma'lumot</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
@@ -13,17 +15,30 @@
     <form id="infoForm">
       <div class="mb-3">
         <label for="category" class="form-label">Kategoriyani tanlang:</label>
-        <select id="category" class="form-select">
+        <select id="category" class="form-select" onchange="toggleDateInput()">
           <option value="">Kategoriya tanlang</option>
           <option value="math">Matematika</option>
           <option value="trivia">Qiziqarli fakt</option>
           <option value="date">Sana</option>
         </select>
       </div>
-      <div class="mb-3">
+
+      <div class="mb-3" id="numberInputDiv">
         <label for="number" class="form-label">Sonni kiriting (ixtiyoriy):</label>
         <input type="text" id="number" class="form-control" placeholder="Sonni kiriting yoki bo'sh qoldiring">
       </div>
+
+      <div id="dateInputDiv" style="display: none;">
+        <div class="mb-3">
+          <label for="month" class="form-label">Oy:</label>
+          <input type="number" id="month" class="form-control" placeholder="1 dan 12 gacha" min="1" max="12">
+        </div>
+        <div class="mb-3">
+          <label for="day" class="form-label">Kun:</label>
+          <input type="number" id="day" class="form-control" placeholder="1 dan 31 gacha" min="1" max="31">
+        </div>
+      </div>
+
       <div class="d-grid">
         <button type="button" class="btn btn-primary" onclick="handleSubmit()">Ma'lumot olish</button>
       </div>
