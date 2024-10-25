@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 500px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    color: #007bff;
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  #factResult {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  button {
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .error {
+    font-size: 0.9em;
+  }
+  
